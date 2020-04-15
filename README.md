@@ -21,6 +21,10 @@ with open(passages_path, 'r') as f:
     for line in f.readlines():
         elems = line.split('\t')
         scores_passages[float(elems[0])] = elems[1]
+        
+'''
+scores_passages is a dict {ranking score: passage}
+'''
 
 # compute the customized TF-IDF
 tfidf = get_tfidf(scores_passages)
